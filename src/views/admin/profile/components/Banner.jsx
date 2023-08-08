@@ -19,7 +19,7 @@ const Banner = () => {
       {/* Name and position */}
       <div className="mt-16 flex flex-col items-center">
         <h4 className="text-xl font-bold text-navy-700 dark:text-white">
-          King Kalala
+          Mr Steve
         </h4>
         <p className="text-base font-normal text-gray-600">Hustler Mtaani</p>
       </div>

@@ -145,7 +145,7 @@ const Navbar = (props) => {
               <div className="p-4">
                 <div className="flex items-center gap-2">
                   <p className="text-sm font-bold text-navy-700 dark:text-white">
-                    👋 Hey, King
+                    👋 Hey, Steve
                   </p>{" "}
                 </div>
               </div>
