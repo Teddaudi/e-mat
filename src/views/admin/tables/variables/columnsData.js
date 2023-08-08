@@ -38,8 +38,8 @@ export const columnsDataCheck = [
 
 export const columnsDataColumns = [
   {
-    Header: "NAME",
-    accessor: "name",
+    Header: "Number Plate",
+    accessor: "Number Plate",
   },
   {
     Header: "PROGRESS",

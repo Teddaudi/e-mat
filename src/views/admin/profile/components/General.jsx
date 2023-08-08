@@ -56,6 +56,13 @@ const General = () => {
             05 : 45 Pm
           </p>
         </div>
+        
+        <button
+        className=" bg-blue-500 text-white w-full px-4 py-2 rounded-md mt-4"
+        >
+        Update
+        </button>
+        
       </div>
     </Card>
   );

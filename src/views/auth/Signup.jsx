@@ -107,18 +107,7 @@ export default function Signup() {
           />
 
         </div>
-        <label htmlFor="route" className="block font-medium mb-1">Select Route*</label>
-        <select
-          className="auth mb-3 w-full py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-          id="route"
-          name="route"
-        >
-          <option value="">Select Route</option>
-          <option value="route1">Ngong to Kamakis</option>
-          <option value="route1">Ngong to CBD via South C</option>
-          <option value="route1">Thika to CBD,Archive</option>
-        
-        </select>
+      
         
 
         <div className="flex gap-1">
@@ -141,6 +130,19 @@ export default function Signup() {
             type="password"
           />
         </div>
+
+        <label htmlFor="route" className="block font-medium mb-1">Select Route*</label>
+        <select
+          className="auth mb-3 w-full py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          id="route"
+          name="route"
+        >
+          <option value="">Select Route</option>
+          <option value="route1">Ngong to Kamakis</option>
+          <option value="route1">Ngong to CBD via South C</option>
+          <option value="route1">Thika to CBD,Archive</option>
+        
+        </select>
 
         <button className="linear mt-2 w-full rounded-xl bg-brand-500 py-[12px] text-base font-medium text-white transition duration-200 hover:bg-brand-600 active:bg-brand-700 dark:bg-brand-400 dark:text-white dark:hover:bg-brand-300 dark:active:bg-brand-200">
           Sign Up

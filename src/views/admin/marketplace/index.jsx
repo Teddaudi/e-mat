@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Banner from "./components/Banner";
 import ride1 from "assets/img/dashboards/ride1.jfif";
 import ride2 from "assets/img/dashboards/ride2.jpg";
@@ -18,6 +19,18 @@ import TopCreatorTable from "./components/TableTopCreators";
 import NftCard from "components/card/NftCard";
 
 const Marketplace = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleNftCardClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+
   return (
     <div className="mt-3 grid h-full grid-cols-1 gap-5 xl:grid-cols-2 2xl:grid-cols-3">
       <div className="col-span-1 h-fit w-full xl:col-span-1 2xl:col-span-2">
@@ -37,18 +50,22 @@ const Marketplace = () => {
             bidders={[avatar1, avatar2, avatar3]}
             title="Deuces"
             author="Ngong Road Sacco"
-                        image={ride1}
-          /><NftCard
+            image={ride1}
+            onClick={handleNftCardClick}
+          />
+          
+          <NftCard
             bidders={[avatar1, avatar2, avatar3]}
             title="Thika Road Sugar"
             author="Thika Road Bosses"
-            
-            image={ride2}/>
-            <NftCard
+            image={ride2} 
+            onClick={handleNftCardClick}
+            />
+          <NftCard
             bidders={[avatar1, avatar2, avatar3]}
             title="Africanah"
             author="City Shuttle"
-            
+            onClick={handleNftCardClick}
             image={ride3}
           />
         </div>
@@ -62,20 +79,20 @@ const Marketplace = () => {
 
         {/* Recently Add NFTs */}
         <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-        <NftCard
-        bidders={[avatar1, avatar2, avatar3]}
-        title="Thika Road Sugar"
-        author="Thika Road Bosses"
-        
-        image={ride2}/>
-        <NftCard
-        bidders={[avatar1, avatar2, avatar3]}
-        title="Africanah"
-        author="City Shuttle"
-        
-        image={ride3}
-      />
-          
+          <NftCard
+            bidders={[avatar1, avatar2, avatar3]}
+            title="Thika Road Sugar"
+            author="Thika Road Bosses"
+
+            image={ride2} />
+          <NftCard
+            bidders={[avatar1, avatar2, avatar3]}
+            title="Africanah"
+            author="City Shuttle"
+
+            image={ride3}
+          />
+
         </div>
       </div>
 
@@ -87,8 +104,25 @@ const Marketplace = () => {
           tableData={tableDataTopCreators}
           columnsData={tableColumnsTopCreators}
         />
-
       </div>
+      {isModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+          <div className="bg-white p-8 rounded-md shadow-lg">
+            {/* Modal content */}
+            <h2 className="text-xl font-bold mb-4">Sign Up</h2>
+            <p className="text-gray-600 mb-4">
+              Sign up to access exclusive NFT content.
+            </p>
+            {/* Add your sign-up form or any content here */}
+            <button
+              className="bg-blue-500 text-white px-4 py-2 rounded-md"
+              onClick={handleCloseModal}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

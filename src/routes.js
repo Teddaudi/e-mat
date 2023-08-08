@@ -29,7 +29,7 @@ const routes = [
     component: <MainDashboard />,
   },
   {
-    name: "Our Services",
+    name: "Services",
     layout: "/admin",
     path: "nft-marketplace",
     icon: <MdOutlineShoppingCart className="h-6 w-6" />,
